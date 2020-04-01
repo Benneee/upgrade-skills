@@ -17,11 +17,13 @@
  * If the first index of an array value is the same as the last index of the said value, that's our answer
  */
 
+const log = require('./helper');
+
 const singleNum = (nums) => {
   for (let i = 0; i < nums.length; i++) {
     if (Array.isArray(nums)) {
       if (nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) {
-        return nums[i];
+        log(nums[i]);
       }
     }
   }
